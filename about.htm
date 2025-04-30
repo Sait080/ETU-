@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЕТУ - Біз туралы</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background: rgba(34, 139, 34, 0.9);
+      color: white;
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    header img.logo {
+      max-width: 140px;
+      height: auto;
+    }
+    header h1 {
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+    nav {
+      display: flex;
+      gap: 1.5em;
+    }
+    nav a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: white;
+    }
+    .hero {
+      background: linear-gradient(135deg, #228B22, #FFD700);
+      text-align: center;
+      padding: 6em 1em;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://via.placeholder.com/1200x600?text=Білім+Фоны') no-repeat center/cover;
+      opacity: 0.2;
+    }
+    .hero h2 {
+      font-size: 2.8em;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+      position: relative;
+      animation: slideIn 1s ease-in-out forwards;
+    }
+    .hero p {
+      font-size: 1.3em;
+      margin-bottom: 1.5em;
+      position: relative;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+    .section {
+      max-width: 1100px;
+      margin: 3em auto;
+      padding: 2em;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      opacity: 0;
+      transform: scale(0.95);
+      animation: scaleIn 0.8s ease forwards;
+    }
+    .section h3 {
+      font-size: 1.8em;
+      font-weight: 600;
+      color: #228B22;
+      margin-bottom: 0.7em;
+      text-align: center;
+      animation: textGlow 2s ease-in-out infinite;
+    }
+    .section h4 {
+      font-size: 1.4em;
+      font-weight: 600;
+      color: #228B22;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    .section p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 1em;
+      text-align: justify;
+    }
+    .section ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: left;
+      margin-left: 2em;
+    }
+    .section ul li {
+      font-size: 1.1em;
+      margin: 0.5em 0;
+      padding-left: 1.5em;
+      position: relative;
+    }
+    .section ul li::before {
+      content: '✔';
+      color: #FFD700;
+      position: absolute;
+      left: 0;
+    }
+    footer {
+      background: linear-gradient(135deg, #228B22, #FFD700);
+      color: white;
+      text-align: center;
+      padding: 2em;
+      position: relative;
+      width: 100%;
+    }
+    footer p {
+      font-size: 1em;
+    }
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes textGlow {
+      0%, 100% { text-shadow: 0 0 5px rgba(255, 215, 0, 0.5); }
+      50% { text-shadow: 0 0 15px rgba(255, 215, 0, 1); }
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+      header img.logo {
+        max-width: 120px;
+      }
+      header h1, .hero h2, .section h3 {
+        font-size: 1.5em;
+      }
+      .hero {
+        padding: 3em 1em;
+      }
+      nav {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+      .section ul {
+        margin-left: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://etu.edu.kz/img/icons/logo.svg" alt="ЕТУ Логотип" class="logo"><h1> Евразиялық Технологиялық Университет</h1>
+    <nav>
+        <a href="index.html">Басты</a>
+        <a href="about.htm">Біз туралы</a>
+        <a href="programs.html">Бағдарламалар</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="testimonials.html">Пікірлер</a>
+        <a href="contact.html">Байланыс</a>
+      </nav>
+  </header>
+  <div class="hero" id="home">
+    <h2>Болашағыңды ЕТУ-мен бірге құр!</h2>
+    <p>Инновациялық білім беру және заманауи технологиялар әлеміне қош келдіңіз.</p>
+  </div>
+  <div class="section" id="about">
+    <h3>Біз туралы</h3>
+    <p>Евразиялық Технологиялық Университет (ЕТУ) – білім мен технологияны біріктіретін Қазақстандағы жетекші жоғары оқу орындарының бірі. Университет 2000 жылы Алматы қаласында құрылды және осы уақыттан бері мыңдаған студенттерді болашақтың көшбасшылары етіп дайындап келеді. Біздің мақсатымыз – студенттерге заманауи білім беру, олардың шығармашылық және кәсіби әлеуетін ашу, сондай-ақ халықаралық деңгейде бәсекеге қабілетті мамандарды даярлау.</p>
+    
+    <h4>Біздің миссиямыз</h4>
+    <p>ЕТУ-дің негізгі миссиясы – білім беру саласында инновациялық тәсілдерді қолдана отырып, студенттерге сапалы білім беру және оларды қоғамның дамуына үлес қоса алатын жауапты азаматтар етіп тәрбиелеу. Біз білімді, технологияны және практиканы біріктіріп, әрбір студенттің жеке қабілеттерін дамытуға мүмкіндік береміз.</p>
+
+    <h4>Біздің құндылықтарымыз</h4>
+    <ul>
+      <li>Сапалы білім: Біз студенттерге ең жоғары деңгейде білім беруге ұмтыламыз.</li>
+      <li>Инновация: Заманауи технологиялар мен оқытудың жаңа әдістерін қолданамыз.</li>
+      <li>Командалық рух: Оқытушылар мен студенттер арасында бірлескен жұмыс ортасын құру.</li>
+      <li>Халықаралық ынтымақтастық: Шетелдік университеттермен серіктестік орнату арқылы студенттерге жаңа мүмкіндіктер ашу.</li>
+    </ul>
+
+    <h4>Біздің жетістіктеріміз</h4>
+    <p>ЕТУ құрылған күннен бастап көптеген жетістіктерге жетті. Университеттің түлектері халықаралық компанияларда, мемлекеттік мекемелерде және стартаптарда жетекші рөлдерді атқарады. Біздің студенттер жыл сайын ұлттық және халықаралық жарыстарда жүлделі орындарға ие болады. Сонымен қатар, ЕТУ QS World University Rankings рейтингінде Қазақстандағы үздік университеттердің қатарына енді. Біздің зертханаларымызда бірнеше инновациялық жоба іске асырылды, олардың арасында жасанды интеллект, робототехника және жасыл энергия саласындағы зерттеулер бар.</p>
+
+    <h4>Неліктен ЕТУ-ді таңдау керек?</h4>
+    <p>ЕТУ-де оқу – бұл сіздің болашағыңызға салынған сенімді инвестиция. Біз студенттерге мыналарды ұсынамыз:</p>
+    <ul>
+      <li>Заманауи оқу бағдарламалары: Халықаралық стандарттарға сәйкес құрылған бағдарламалар.</li>
+      <li>Тәжірибелі оқытушылар: Өз саласында жетекші мамандардан білім алу мүмкіндігі.</li>
+      <li>Халықаралық серіктестік: Шетелдік университеттермен алмасу бағдарламалары.</li>
+      <li>Инновациялық зертханалар: Студенттердің практикалық дағдыларын дамытуға арналған жабдықтар.</li>
+      <li>Мансаптық қолдау: Түлектерді жұмысқа орналастыру және мансаптық кеңес беру орталығы.</li>
+    </ul>
+
+    <p>ЕТУ – бұл тек білім беру ордасы ғана емес, сонымен қатар студенттердің өз армандарын жүзеге асыра алатын ортасы. Біздің университетке қосылыңыз және болашақты бірге құрайық!</p>
+  </div>
+  <footer>
+    <p>© 2025 ЕТУ. Барлық құқықтар қорғалған.</p>
+  </footer>
+</body>
+</html>

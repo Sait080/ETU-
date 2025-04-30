@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЕТУ - Бағдарламалар</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background: rgba(34, 139, 34, 0.9);
+      color: white;
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    header img.logo {
+      max-width: 140px;
+      height: auto;
+    }
+    header h1 {
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+    nav {
+      display: flex;
+      gap: 1.5em;
+    }
+    nav a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: white;
+    }
+    .hero {
+      background: linear-gradient(135deg, #228B22, #FFD700);
+      text-align: center;
+      padding: 6em 1em;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://via.placeholder.com/1200x600?text=Білім+Фоны') no-repeat center/cover;
+      opacity: 0.2;
+    }
+    .hero h2 {
+      font-size: 2.8em;
+      font-weight: 700;
+      margin-bottom: 0.5em;
+      position: relative;
+      animation: slideIn 1s ease-in-out forwards;
+    }
+    .hero p {
+      font-size: 1.3em;
+      margin-bottom: 1.5em;
+      position: relative;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+    .section {
+      max-width: 1100px;
+      margin: 3em auto;
+      padding: 2em;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      opacity: 0;
+      transform: scale(0.95);
+      animation: scaleIn 0.8s ease forwards;
+    }
+    .section h3 {
+      font-size: 1.8em;
+      font-weight: 600;
+      color: #228B22;
+      margin-bottom: 0.7em;
+      text-align: center;
+    }
+    .section p {
+      font-size: 1.1em;
+      margin-bottom: 1em;
+      text-align: center;
+    }
+    .program {
+      margin: 1em 0;
+      padding: 1em 1.5em;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .program:hover {
+      background: #FFD700;
+      color: #228B22;
+      transform: translateY(-5px);
+    }
+    .program h4 {
+      font-size: 1.2em;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+    }
+    .program p {
+      font-size: 1em;
+      text-align: left;
+      line-height: 1.5;
+    }
+    footer {
+      background: linear-gradient(135deg, #228B22, #FFD700);
+      color: white;
+      text-align: center;
+      padding: 2em;
+      position: relative;
+      width: 100%;
+    }
+    footer p {
+      font-size: 1em;
+    }
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+      header img.logo {
+        max-width: 120px;
+      }
+      header h1, .hero h2, .section h3 {
+        font-size: 1.5em;
+      }
+      .hero {
+        padding: 3em 1em;
+      }
+      nav {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://etu.edu.kz/img/icons/logo.svg" alt="ЕТУ Логотип" class="logo"><h1> Евразиялық Технологиялық Университет</h1>
+    <nav>
+        <a href="index.html">Басты</a>
+        <a href="about.htm">Біз туралы</a>
+        <a href="programs.html">Бағдарламалар</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="testimonials.html">Пікірлер</a>
+        <a href="contact.html">Байланыс</a>
+      </nav>
+  </header>
+  <div class="hero" id="home">
+    <h2>Болашағыңды ЕТУ-мен бірге құр!</h2>
+    <p>Инновациялық білім беру және заманауи технологиялар әлеміне қош келдіңіз.</p>
+  </div>
+  <div class="section" id="programs">
+    <h3>Оқу бағдарламалары</h3>
+    <p>Евразиялық Технологиялық Университетте сіз келесі бағыттар бойынша білім ала аласыз. Біздің бағдарламалар халықаралық стандарттарға сәйкес құрылған және студенттердің практикалық дағдыларын дамытуға бағытталған.</p>
+    <div class="program">
+      <h4>Информатика және бағдарламалау</h4>
+      <p>Бұл бағдарлама студенттерге бағдарламалау, жасанды интеллект, деректер базасы және веб-әзірлеу сияқты салаларда терең білім береді. Студенттер Python, Java, C++ сияқты заманауи бағдарламалау тілдерін үйренеді және нақты жобаларда жұмыс істейді.</p>
+    </div>
+    <div class="program">
+      <h4>Инженерия және технология</h4>
+      <p>Инженерия бағдарламасы робототехника, автоматика және жасыл энергия салаларын қамтиды. Студенттер заманауи зертханаларда тәжірибе жинап, инновациялық технологияларды қолдануға үйренеді.</p>
+    </div>
+    <div class="program">
+      <h4>Бизнес және басқару</h4>
+      <p>Бұл бағдарлама болашақ кәсіпкерлер мен менеджерлерді дайындайды. Студенттер маркетинг, қаржы, жобаларды басқару және халықаралық бизнес саласында білім алады. Практикалық кейстер мен стартап жобаларына қатысу мүмкіндігі бар.</p>
+    </div>
+    <div class="program">
+      <h4>Дизайн және инновация</h4>
+      <p>Дизайн бағдарламасы графикалық дизайн, UI/UX және өнім дизайнын қамтиды. Студенттер Adobe Creative Suite, Figma сияқты құралдармен жұмыс істейді және шығармашылық жобаларды жүзеге асырады.</p>
+    </div>
+  </div>
+  <footer>
+    <p>© 2025 ЕТУ. Барлық құқықтар қорғалған.</p>
+  </footer>
+</body>
+</html>

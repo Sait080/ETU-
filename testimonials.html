@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ЕТУ - Пікірлер</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: #228B22;
+      color: white;
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+    }
+    header img.logo {
+      max-width: 140px;
+      height: auto;
+    }
+    nav {
+      display: flex;
+      gap: 1em;
+    }
+    nav a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: white;
+    }
+    .hero {
+      background: linear-gradient(135deg, #228B22, #FFD700);
+      text-align: center;
+      padding: 4em 1em;
+      color: white;
+    }
+    .hero h2 {
+      font-size: 2em;
+      font-weight: 600;
+    }
+    .hero p {
+      font-size: 1.2em;
+    }
+    .section {
+      max-width: 900px;
+      margin: 2em auto;
+      padding: 1em;
+      background-color: white;
+      border-radius: 10px;
+    }
+    .section h3 {
+      font-size: 1.5em;
+      font-weight: 600;
+      color: #228B22;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    .testimonials {
+      text-align: center;
+    }
+    .testimonial {
+      padding: 1em;
+      margin-bottom: 1em;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+    }
+    .testimonial p {
+      font-size: 1em;
+      color: #333;
+      margin-bottom: 0.5em;
+    }
+    .testimonial span {
+      font-size: 0.9em;
+      font-weight: 500;
+      color: #228B22;
+    }
+    footer {
+      background: linear-gradient(135deg, #228B22, #FFD700);
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    footer p {
+      font-size: 0.9em;
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+      header img.logo {
+        max-width: 120px;
+      }
+      .hero h2 {
+        font-size: 1.5em;
+      }
+      .hero p {
+        font-size: 1em;
+      }
+      nav {
+        flex-direction: column;
+        gap: 0.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://etu.edu.kz/img/icons/logo.svg" alt="ЕТУ Логотип" class="logo"><h1>Евразиялық Технологиялық Университет</h1>
+    <nav>
+        <a href="index.html">Басты</a>
+        <a href="about.htm">Біз туралы</a>
+        <a href="programs.html">Бағдарламалар</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="testimonials.html">Пікірлер</a>
+        <a href="contact.html">Байланыс</a>
+      </nav>
+  </header>
+  <div class="hero" id="home">
+    <h2>Болашағыңды ЕТУ-мен бірге құр!</h2>
+    <p>Инновациялық білім беру және заманауи технологиялар әлеміне қош келдіңіз.</p>
+  </div>
+  <div class="section" id="testimonials">
+    <h3>Пікірлер</h3>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"ЕТУ-де оқу өте қызықты. Оқытушылар өте жақсы түсіндіреді, әрі тәжірибелік сабақтар көп."</p>
+        <span>Айгүл, Информатика студенті</span>
+      </div>
+      <div class="testimonial">
+        <p>"Мұнда зертханалар заманауи, және бізге көп мүмкіндік беріледі. ЕТУ-ді таңдағаныма өкінбеймін."</p>
+        <span>Ерлан, Инженерия студенті</span>
+      </div>
+      <div class="testimonial">
+        <p>"Оқытушылар әрқашан қолдау көрсетеді. Университеттің ортасы өте жайлы."</p>
+        <span>Динара, Бизнес және басқару студенті</span>
+      </div>
+      <div class="testimonial">
+        <p>Сапалы оқу керемет мұғалмдер.</p>
+        <span>Динара, Бизнес және басқару студенті</span>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>© 2025 ЕТУ. Барлық құқықтар қорғалған.</p>
+  </footer>
+</body>
+</html>
